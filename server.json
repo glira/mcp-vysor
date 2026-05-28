@@ -1,0 +1,40 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-10-17/server.schema.json",
+  "name": "io.github.glira/mcp-vysor",
+  "title": "MCP Vysor",
+  "description": "Visual Android device control via ADB — screenshots, coordinate taps, UI inspection for Cursor and AI agents",
+  "version": "1.0.0",
+  "websiteUrl": "https://github.com/glira/mcp-vysor",
+  "repository": {
+    "url": "https://github.com/glira/mcp-vysor",
+    "source": "github"
+  },
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "mcp-vysor",
+      "version": "1.0.0",
+      "transport": {
+        "type": "stdio"
+      },
+      "packageArguments": [
+        {
+          "type": "positional",
+          "valueHint": "entrypoint",
+          "value": "dist/index.js"
+        }
+      ],
+      "environmentVariables": [
+        {
+          "name": "ADB_PATH",
+          "description": "Path to adb executable",
+          "default": "adb"
+        },
+        {
+          "name": "ADB_DEVICE",
+          "description": "Default ADB device serial when multiple devices are connected"
+        }
+      ]
+    }
+  ]
+}

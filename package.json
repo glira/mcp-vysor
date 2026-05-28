@@ -1,0 +1,52 @@
+{
+  "name": "mcp-vysor",
+  "mcpName": "io.github.glira/mcp-vysor",
+  "version": "1.0.0",
+  "description": "MCP server for visual Android device control via ADB — screenshots, taps, UI inspection for Cursor and AI agents",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "mcp-vysor": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsx src/index.ts",
+    "prepare": "npm run build"
+  },
+  "keywords": [
+    "mcp",
+    "mcp-server",
+    "adb",
+    "android",
+    "vysor",
+    "automation",
+    "cursor",
+    "model-context-protocol",
+    "mobile-testing",
+    "scrcpy"
+  ],
+  "author": "Gemayel Lira <gemayellira@gmail.com> (https://github.com/glira)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/glira/mcp-vysor.git"
+  },
+  "bugs": {
+    "url": "https://github.com/glira/mcp-vysor/issues"
+  },
+  "homepage": "https://github.com/glira/mcp-vysor#readme",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.1",
+    "sharp": "^0.34.2",
+    "zod": "^3.25.67"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.30",
+    "tsx": "^4.19.4",
+    "typescript": "^5.8.3"
+  }
+}
