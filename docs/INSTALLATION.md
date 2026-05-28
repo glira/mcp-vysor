@@ -34,7 +34,17 @@ Baixe [Android Platform Tools](https://developer.android.com/tools/releases/plat
 
 ## Instalar o mcp-vysor
 
-### Opção A — Clone e build local (recomendado para desenvolvimento)
+### Opção A — npx (recomendado)
+
+Sem clone nem build manual. Requer Node.js e npm:
+
+```bash
+npx -y mcp-vysor
+```
+
+Pacote npm: https://www.npmjs.com/package/mcp-vysor
+
+### Opção B — Clone e build local (desenvolvimento)
 
 ```bash
 git clone https://github.com/glira/mcp-vysor.git

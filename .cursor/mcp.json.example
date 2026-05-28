@@ -1,8 +1,8 @@
 {
   "mcpServers": {
     "vysor": {
-      "command": "node",
-      "args": ["${workspaceFolder}/dist/index.js"],
+      "command": "npx",
+      "args": ["-y", "mcp-vysor"],
       "env": {
         "ADB_PATH": "adb"
       }

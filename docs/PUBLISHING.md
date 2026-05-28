@@ -98,8 +98,8 @@ Isso ajuda PulseMCP, Glama e outros a indexar automaticamente.
 {
   "mcpServers": {
     "vysor": {
-      "command": "node",
-      "args": ["/caminho/para/mcp-vysor/dist/index.js"],
+      "command": "npx",
+      "args": ["-y", "mcp-vysor"],
       "env": { "ADB_PATH": "adb" }
     }
   }
@@ -108,16 +108,34 @@ Isso ajuda PulseMCP, Glama e outros a indexar automaticamente.
 
 ---
 
-## 4. Checklist rápido
+## 4. npm
+
+**Pacote:** https://www.npmjs.com/package/mcp-vysor
+
+```bash
+npx -y mcp-vysor
+```
+
+Publicar nova versão (mantenedor):
+
+```bash
+npm version patch
+npm publish
+git push && git push --tags
+```
+
+---
+
+## 5. Checklist rápido
 
 - [x] Código no GitHub
 - [x] README e documentação
 - [x] `server.json` para registro oficial
 - [x] `mcpName` no package.json
-- [ ] Topics no GitHub
+- [x] Publicado no npm (`mcp-vysor`)
+- [x] Topics no GitHub
 - [ ] `mcp-publisher publish` (registro oficial)
 - [ ] Submeter em Glama + PulseMCP
-- [ ] (Opcional) `npm publish`
 - [ ] (Opcional) PR no awesome-mcp-servers
 
 ---

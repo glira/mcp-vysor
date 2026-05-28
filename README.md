@@ -32,6 +32,14 @@ Servidor [Model Context Protocol (MCP)](https://modelcontextprotocol.io) para **
 
 ## Instalação rápida
 
+### Opção A — npx (recomendado)
+
+```bash
+npx -y mcp-vysor
+```
+
+### Opção B — clone e build
+
 ```bash
 git clone https://github.com/glira/mcp-vysor.git
 cd mcp-vysor
@@ -49,11 +57,25 @@ Adicione em `~/.cursor/mcp.json`:
 {
   "mcpServers": {
     "vysor": {
-      "command": "node",
-      "args": ["/caminho/absoluto/mcp-vysor/dist/index.js"],
+      "command": "npx",
+      "args": ["-y", "mcp-vysor"],
       "env": {
         "ADB_PATH": "adb"
       }
+    }
+  }
+}
+```
+
+Alternativa com clone local:
+
+```json
+{
+  "mcpServers": {
+    "vysor": {
+      "command": "node",
+      "args": ["/caminho/absoluto/mcp-vysor/dist/index.js"],
+      "env": { "ADB_PATH": "adb" }
     }
   }
 }

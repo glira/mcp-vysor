@@ -13,6 +13,43 @@ Recomendamos configuração global se você usar o MCP em vários projetos Andro
 
 ## 2. Adicionar o servidor
 
+### Recomendado — via npx
+
+Edite `~/.cursor/mcp.json`:
+
+```json
+{
+  "mcpServers": {
+    "vysor": {
+      "command": "npx",
+      "args": ["-y", "mcp-vysor"],
+      "env": {
+        "ADB_PATH": "adb"
+      }
+    }
+  }
+}
+```
+
+Com dispositivo específico:
+
+```json
+{
+  "mcpServers": {
+    "vysor": {
+      "command": "npx",
+      "args": ["-y", "mcp-vysor"],
+      "env": {
+        "ADB_PATH": "adb",
+        "ADB_DEVICE": "SEU_SERIAL_AQUI"
+      }
+    }
+  }
+}
+```
+
+### Alternativa — clone local
+
 Edite `~/.cursor/mcp.json` e inclua o bloco `vysor`:
 
 ```json
@@ -31,7 +68,7 @@ Edite `~/.cursor/mcp.json` e inclua o bloco `vysor`:
 
 Substitua `/CAMINHO/ABSOLUTO/para/mcp-vysor` pelo caminho real após o clone.
 
-### Exemplo real (Linux)
+### Exemplo real (Linux, clone local)
 
 ```json
 {
