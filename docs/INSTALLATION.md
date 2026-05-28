@@ -34,17 +34,28 @@ Baixe [Android Platform Tools](https://developer.android.com/tools/releases/plat
 
 ## Instalar o mcp-vysor
 
+**Pacote npm:** https://www.npmjs.com/package/mcp-vysor
+
 ### Opção A — npx (recomendado)
 
-Sem clone nem build manual. Requer Node.js e npm:
+Sem clone nem build. Baixa e executa automaticamente:
 
 ```bash
 npx -y mcp-vysor
 ```
 
-Pacote npm: https://www.npmjs.com/package/mcp-vysor
+Ideal para uso no Cursor e outros clientes MCP.
 
-### Opção B — Clone e build local (desenvolvimento)
+### Opção B — instalação global
+
+```bash
+npm install -g mcp-vysor
+mcp-vysor
+```
+
+No `~/.cursor/mcp.json`, use `"command": "mcp-vysor"`.
+
+### Opção C — clone e build (desenvolvimento)
 
 ```bash
 git clone https://github.com/glira/mcp-vysor.git
@@ -54,12 +65,6 @@ npm run build
 ```
 
 O script `prepare` executa o build automaticamente após `npm install`.
-
-### Opção B — Instalação global via npm (quando publicado)
-
-```bash
-npm install -g mcp-vysor
-```
 
 ## Variáveis de ambiente
 
@@ -72,16 +77,23 @@ Exemplo com múltiplos dispositivos:
 
 ```bash
 export ADB_DEVICE=RF8M1234567
-node dist/index.js
+npx -y mcp-vysor
 ```
 
 ## Verificação pós-instalação
 
 ```bash
-# Listar dispositivos
+# Dispositivo ADB conectado
 adb devices -l
 
-# Testar cliente ADB do projeto
+# Servidor MCP via npm (deve imprimir no stderr e aguardar stdio)
+npx -y mcp-vysor
+# Ctrl+C para encerrar
+```
+
+Para testar ADB a partir do clone local:
+
+```bash
 node --input-type=module -e "
   import { AdbClient } from './dist/adb.js';
   const adb = new AdbClient();
@@ -89,7 +101,5 @@ node --input-type=module -e "
   console.log('Screen:', await adb.getScreenInfo());
 "
 ```
-
-Se ambos retornarem dados válidos, a instalação está correta.
 
 Próximo passo: [Configuração no Cursor](./CURSOR.md)

@@ -20,6 +20,7 @@ e este projeto adere ao [Semantic Versioning](https://semver.org/lang/pt-BR/).
 - Suporte a múltiplos dispositivos com seleção por `device_id` ou `ADB_DEVICE`
 - Documentação completa em `docs/`
 - Workflow CI para build TypeScript
+- Publicado no npm como [`mcp-vysor`](https://www.npmjs.com/package/mcp-vysor) — instalação via `npx -y mcp-vysor`
 
 ### Corrigido
 

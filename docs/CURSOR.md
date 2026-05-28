@@ -48,6 +48,27 @@ Com dispositivo específico:
 }
 ```
 
+### Alternativa — instalação global npm
+
+```bash
+npm install -g mcp-vysor
+```
+
+```json
+{
+  "mcpServers": {
+    "vysor": {
+      "command": "mcp-vysor",
+      "env": {
+        "ADB_PATH": "adb"
+      }
+    }
+  }
+}
+```
+
+Pacote: https://www.npmjs.com/package/mcp-vysor
+
 ### Alternativa — clone local
 
 Edite `~/.cursor/mcp.json` e inclua o bloco `vysor`:

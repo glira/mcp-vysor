@@ -1,6 +1,7 @@
 # MCP Vysor
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![npm version](https://img.shields.io/npm/v/mcp-vysor.svg)](https://www.npmjs.com/package/mcp-vysor)
 [![Node.js](https://img.shields.io/badge/Node.js-%3E%3D18-green)](package.json)
 [![MCP](https://img.shields.io/badge/MCP-Compatible-purple)](https://modelcontextprotocol.io)
 
@@ -32,13 +33,24 @@ Servidor [Model Context Protocol (MCP)](https://modelcontextprotocol.io) para **
 
 ## Instalação rápida
 
-### Opção A — npx (recomendado)
+Pacote npm: **[mcp-vysor@1.0.0](https://www.npmjs.com/package/mcp-vysor)**
+
+### Opção A — npx (recomendado, zero install)
+
+Executa direto, sem clone nem build:
 
 ```bash
 npx -y mcp-vysor
 ```
 
-### Opção B — clone e build
+### Opção B — instalação global
+
+```bash
+npm install -g mcp-vysor
+mcp-vysor
+```
+
+### Opção C — clone e build (desenvolvimento)
 
 ```bash
 git clone https://github.com/glira/mcp-vysor.git
@@ -62,6 +74,19 @@ Adicione em `~/.cursor/mcp.json`:
       "env": {
         "ADB_PATH": "adb"
       }
+    }
+  }
+}
+```
+
+Alternativa com instalação global:
+
+```json
+{
+  "mcpServers": {
+    "vysor": {
+      "command": "mcp-vysor",
+      "env": { "ADB_PATH": "adb" }
     }
   }
 }

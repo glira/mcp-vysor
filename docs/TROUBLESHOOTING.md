@@ -7,10 +7,15 @@
 **Soluções:**
 
 1. Confirme que editou `~/.cursor/mcp.json` (não apenas o `.example` do repo)
-2. Use caminho **absoluto** para `dist/index.js`
-3. Execute `npm run build` — o arquivo `dist/index.js` deve existir
-4. Reinicie o Cursor completamente
-5. Verifique logs em Settings → MCP → vysor → Show Output
+2. Prefira instalação via npm (recomendado):
+   ```json
+   "command": "npx",
+   "args": ["-y", "mcp-vysor"]
+   ```
+3. Se usar clone local, use caminho **absoluto** para `dist/index.js` e rode `npm run build`
+4. Teste manual: `npx -y mcp-vysor` (deve iniciar sem erro fatal)
+5. Reinicie o Cursor completamente
+6. Verifique logs em Settings → MCP → vysor → Show Output
 
 ## Erro: "Nenhum dispositivo Android conectado"
 

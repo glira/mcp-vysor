@@ -110,17 +110,39 @@ Isso ajuda PulseMCP, Glama e outros a indexar automaticamente.
 
 ## 4. npm
 
-**Pacote:** https://www.npmjs.com/package/mcp-vysor
+**Pacote publicado:** https://www.npmjs.com/package/mcp-vysor  
+**Versão atual:** 1.0.0
+
+### Instalar / executar
 
 ```bash
+# Sem instalar (recomendado)
 npx -y mcp-vysor
+
+# Global
+npm install -g mcp-vysor
+mcp-vysor
+```
+
+### Cursor
+
+```json
+{
+  "mcpServers": {
+    "vysor": {
+      "command": "npx",
+      "args": ["-y", "mcp-vysor"],
+      "env": { "ADB_PATH": "adb" }
+    }
+  }
+}
 ```
 
 Publicar nova versão (mantenedor):
 
 ```bash
 npm version patch
-npm publish
+npm publish --access public --otp=CODIGO_2FA
 git push && git push --tags
 ```
 
