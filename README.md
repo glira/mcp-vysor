@@ -1,3 +1,5 @@
+English | [Português](README.pt-BR.md)
+
 # MCP Vysor
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
@@ -5,52 +7,52 @@
 [![Node.js](https://img.shields.io/badge/Node.js-%3E%3D18-green)](package.json)
 [![MCP](https://img.shields.io/badge/MCP-Compatible-purple)](https://modelcontextprotocol.io)
 
-Servidor [Model Context Protocol (MCP)](https://modelcontextprotocol.io) para **controle visual de dispositivos Android via ADB**. Permite que agentes de IA no **Cursor**, Claude Desktop e outros clientes MCP vejam a tela do celular, cliquem em coordenadas, inspecionem elementos da UI e automatizem fluxos — similar ao Vysor, mas integrado nativamente ao seu IDE.
+A [Model Context Protocol (MCP)](https://modelcontextprotocol.io) server for **visual control of Android devices over ADB**. AI agents in **Cursor**, Claude Desktop, and other MCP clients can see the phone screen, tap coordinates, inspect UI elements, and run flows — like Vysor, wired into your IDE.
 
-## Por que usar?
+## Why use it?
 
-- **Visualização real:** screenshots retornados como imagem para o agente analisar
-- **Cliques precisos:** tap por pixels, porcentagem ou elemento semântico
-- **Grade de coordenadas:** identifique posições x,y diretamente na imagem
-- **18 ferramentas:** cobre screenshot, gestos, UI dump, shell, apps e teclas
-- **Zero config extra:** usa o `adb` que você já tem instalado
+- **A real screen:** screenshots come back as images the agent can look at
+- **Precise taps:** by pixels, by percentage, or by a labeled element
+- **A coordinate grid:** read x,y straight off the image
+- **18 tools:** screenshots, gestures, UI dump, shell, apps, and keys
+- **No extra stack:** it uses the `adb` you already have
 
-## Demonstração de fluxo
+## A typical flow
 
 ```
-1. adb_screenshot_with_grid  →  agente vê a tela com coordenadas
-2. adb_tap x=996 y=2073      →  clica na aba "Perfil"
-3. adb_find_elements         →  encontra "Desativar notificações push"
-4. adb_tap_element           →  desativa o toggle
-5. adb_screenshot            →  confirma visualmente
+1. adb_screenshot_with_grid  →  the agent sees the screen with coordinates
+2. adb_tap x=996 y=2073      →  taps the "Profile" tab
+3. adb_find_elements         →  finds "Turn off push notifications"
+4. adb_tap_element           →  flips the toggle
+5. adb_screenshot            →  confirms what changed
 ```
 
-## Requisitos
+## Requirements
 
 - Node.js 18+
 - [Android Platform Tools (ADB)](https://developer.android.com/tools/releases/platform-tools)
-- Dispositivo Android 8.0+ com depuração USB ativada
+- An Android 8.0+ device with USB debugging on
 
-## Instalação rápida
+## Install
 
-Pacote npm: **[mcp-vysor@1.0.0](https://www.npmjs.com/package/mcp-vysor)**
+npm package: **[mcp-vysor@1.0.0](https://www.npmjs.com/package/mcp-vysor)**
 
-### Opção A — npx (recomendado, zero install)
+### Option A — npx (recommended)
 
-Executa direto, sem clone nem build:
+Runs without a clone or a build:
 
 ```bash
 npx -y mcp-vysor
 ```
 
-### Opção B — instalação global
+### Option B — global install
 
 ```bash
 npm install -g mcp-vysor
 mcp-vysor
 ```
 
-### Opção C — clone e build (desenvolvimento)
+### Option C — clone and build (development)
 
 ```bash
 git clone https://github.com/glira/mcp-vysor.git
@@ -59,11 +61,11 @@ npm install
 npm run build
 ```
 
-Guia completo: [docs/INSTALLATION.md](docs/INSTALLATION.md)
+Full guide (Portuguese): [docs/INSTALLATION.md](docs/INSTALLATION.md)
 
-## Configuração no Cursor
+## Cursor setup
 
-Adicione em `~/.cursor/mcp.json`:
+Add this to `~/.cursor/mcp.json`:
 
 ```json
 {
@@ -79,7 +81,7 @@ Adicione em `~/.cursor/mcp.json`:
 }
 ```
 
-Alternativa com instalação global:
+Global install:
 
 ```json
 {
@@ -92,78 +94,74 @@ Alternativa com instalação global:
 }
 ```
 
-Alternativa com clone local:
+Local clone:
 
 ```json
 {
   "mcpServers": {
     "vysor": {
       "command": "node",
-      "args": ["/caminho/absoluto/mcp-vysor/dist/index.js"],
+      "args": ["/absolute/path/mcp-vysor/dist/index.js"],
       "env": { "ADB_PATH": "adb" }
     }
   }
 }
 ```
 
-Guia detalhado: [docs/CURSOR.md](docs/CURSOR.md)
+Detailed guide (Portuguese): [docs/CURSOR.md](docs/CURSOR.md)
 
-## Ferramentas disponíveis
+## Tools
 
-| Categoria | Ferramentas |
-|-----------|-------------|
-| **Tela** | `adb_list_devices`, `adb_get_screen_info`, `adb_screenshot`, `adb_screenshot_with_grid`, `adb_get_current_app` |
-| **Coordenadas** | `adb_tap`, `adb_tap_percent`, `adb_tap_from_image_coords`, `adb_swipe`, `adb_long_press`, `adb_get_coordinates` |
+| Category | Tools |
+|----------|-------|
+| **Screen** | `adb_list_devices`, `adb_get_screen_info`, `adb_screenshot`, `adb_screenshot_with_grid`, `adb_get_current_app` |
+| **Coordinates** | `adb_tap`, `adb_tap_percent`, `adb_tap_from_image_coords`, `adb_swipe`, `adb_long_press`, `adb_get_coordinates` |
 | **UI** | `adb_ui_dump`, `adb_find_elements`, `adb_tap_element` |
-| **Entrada** | `adb_input_text`, `adb_keyevent`, `adb_shell`, `adb_start_app`, `adb_stop_app` |
+| **Input** | `adb_input_text`, `adb_keyevent`, `adb_shell`, `adb_start_app`, `adb_stop_app` |
 
-Referência completa com parâmetros: [docs/TOOLS.md](docs/TOOLS.md)
+Full parameter reference (Portuguese): [docs/TOOLS.md](docs/TOOLS.md)
 
-## Skill na Agensi (opcional)
+## A skill for the agent
 
-O servidor no npm continua gratuito. Playbooks pagos (e um pacote inicial) ficam em [`agensi/`](agensi/CREATOR.md). A Agensi não hospeda o MCP: o ZIP traz `SKILL.md` e o template `npx -y mcp-vysor`.
+The server in this repository stays free on npm. This skill teaches the agent the loop: see the screen, tap, and confirm what changed. Install the MCP with `npx -y mcp-vysor`. The skill shows the agent how to use that server.
 
-```bash
-bash agensi/build-zip.sh
-```
+[MCP Vysor Starter](https://www.agensi.io/skills/mcp-vysor-starter)
 
-Gera `agensi/zips/mcp-vysor-starter.zip` (grátis), `agensi/zips/mcp-vysor-pro.zip` (preço sugerido US$ 19–29) e `agensi/zips/mcp-tomticket-starter.zip` (fase 2). Cadastro e upload: [agensi/CREATOR.md](agensi/CREATOR.md).
+## Environment variables
 
-Skill grátis: [MCP Vysor Starter](https://www.agensi.io/skills/mcp-vysor-starter).
+| Variable | Description | Default |
+|----------|-------------|---------|
+| `ADB_PATH` | Path to the adb binary | `adb` |
+| `ADB_DEVICE` | Default device serial | auto (when one device is online) |
 
-## Variáveis de ambiente
+## Documentation
 
-| Variável | Descrição | Padrão |
-|----------|-----------|--------|
-| `ADB_PATH` | Caminho do executável adb | `adb` |
-| `ADB_DEVICE` | Serial padrão do dispositivo | auto (se 1 device) |
+The guides below are in Portuguese.
 
-## Documentação
-
-| Documento | Conteúdo |
-|-----------|----------|
-| [Instalação](docs/INSTALLATION.md) | Pré-requisitos, ADB, build, verificação |
-| [Cursor](docs/CURSOR.md) | Configuração MCP no IDE |
-| [Ferramentas](docs/TOOLS.md) | Referência completa de cada tool |
-| [Arquitetura](docs/ARCHITECTURE.md) | Design, módulos, fluxos, limitações |
-| [Troubleshooting](docs/TROUBLESHOOTING.md) | Problemas comuns e soluções |
-| [Publicação](docs/PUBLISHING.md) | Registro oficial MCP e diretórios |
-| [Contribuindo](CONTRIBUTING.md) | Como contribuir |
-| [Changelog](CHANGELOG.md) | Histórico de versões |
+| Document | Contents |
+|----------|----------|
+| [Install](docs/INSTALLATION.md) | Requirements, ADB, build, checks |
+| [Cursor](docs/CURSOR.md) | MCP setup in the IDE |
+| [Tools](docs/TOOLS.md) | Every tool, with parameters |
+| [Architecture](docs/ARCHITECTURE.md) | Design, modules, flows, limits |
+| [Troubleshooting](docs/TROUBLESHOOTING.md) | Common problems and fixes |
+| [Publishing](docs/PUBLISHING.md) | Official MCP registry and directories |
+| [Contributing](CONTRIBUTING.md) | How to contribute |
+| [Changelog](CHANGELOG.md) | Version history |
 
 mcp-name: io.github.glira/mcp-vysor
 
-## Desenvolvimento
+## Development
 
 ```bash
-npm run dev    # servidor MCP em modo desenvolvimento
-npm run build  # compila TypeScript → dist/
+npm run dev    # MCP server in development mode
+npm run build  # compile TypeScript to dist/
 ```
 
-## Licença
+## License
 
 [MIT](LICENSE) — Copyright (c) 2026 Gemayel Lira
 
-## Autor
+## Author
 
 **Gemayel Lira** — [github.com/glira](https://github.com/glira)
