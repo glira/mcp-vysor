@@ -162,7 +162,9 @@ A Agensi vende um ZIP com `SKILL.md` na raiz. O comprador instala o MCP à parte
 bash agensi/build-zip.sh
 ```
 
-Passos de conta (Google, creator mode, Stripe ou Zoneless) e texto da vitrine: [agensi/CREATOR.md](../agensi/CREATOR.md). Você fica com 70%. Revisão da Agensi costuma levar até 24 horas. Quando publicar, cole a URL do listing no README.
+Passos de conta (Google, creator mode, Stripe ou Zoneless) e texto da vitrine: [agensi/CREATOR.md](../agensi/CREATOR.md). Você fica com 70%. Revisão da Agensi costuma levar até 24 horas.
+
+Skill grátis no ar: [MCP Vysor Starter](https://www.agensi.io/skills/mcp-vysor-starter).
 
 ## 5. Checklist rápido
 
@@ -175,8 +177,9 @@ Passos de conta (Google, creator mode, Stripe ou Zoneless) e texto da vitrine: [
 - [ ] `mcp-publisher publish` (registro oficial)
 - [ ] Submeter em Glama + PulseMCP
 - [ ] (Opcional) PR no awesome-mcp-servers
-- [ ] Conta Agensi (Google + creator mode + Stripe ou Zoneless) — ver `agensi/CREATOR.md`
-- [ ] Upload dos ZIPs na Agensi (starter grátis, pro US$ 19–29)
+- [x] Conta Agensi (Google + creator mode + Zoneless) — ver `agensi/CREATOR.md`
+- [x] Starter na Agensi: https://www.agensi.io/skills/mcp-vysor-starter
+- [ ] Pro na Agensi (US$ 24, em revisão)
 
 ---
 

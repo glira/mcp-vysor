@@ -127,7 +127,9 @@ O servidor no npm continua gratuito. Playbooks pagos (e um pacote inicial) ficam
 bash agensi/build-zip.sh
 ```
 
-Gera `agensi/zips/mcp-vysor-starter.zip` (grátis), `agensi/zips/mcp-vysor-pro.zip` (preço sugerido US$ 19–29) e `agensi/zips/mcp-tomticket-starter.zip` (fase 2). Cadastro e upload: [agensi/CREATOR.md](agensi/CREATOR.md). A URL da vitrine entra aqui quando o listing estiver no ar.
+Gera `agensi/zips/mcp-vysor-starter.zip` (grátis), `agensi/zips/mcp-vysor-pro.zip` (preço sugerido US$ 19–29) e `agensi/zips/mcp-tomticket-starter.zip` (fase 2). Cadastro e upload: [agensi/CREATOR.md](agensi/CREATOR.md).
+
+Skill grátis: [MCP Vysor Starter](https://www.agensi.io/skills/mcp-vysor-starter).
 
 ## Variáveis de ambiente
 

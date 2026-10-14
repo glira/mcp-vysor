@@ -39,4 +39,4 @@ Cada ZIP tem `SKILL.md` na raiz (frontmatter `name` e `description`), limite 50 
 
 ## 5. Depois do upload
 
-Quando o listing estiver no ar, atualize o placeholder em `README.md` e `docs/PUBLISHING.md` com a URL publica da skill.
+Starter no ar: https://www.agensi.io/skills/mcp-vysor-starter (tambem em `README.md` e `docs/PUBLISHING.md`). A Pro fica com a URL publica depois da revisao.
