@@ -119,6 +119,16 @@ Guia detalhado: [docs/CURSOR.md](docs/CURSOR.md)
 
 Referência completa com parâmetros: [docs/TOOLS.md](docs/TOOLS.md)
 
+## Skill na Agensi (opcional)
+
+O servidor no npm continua gratuito. Playbooks pagos (e um pacote inicial) ficam em [`agensi/`](agensi/CREATOR.md). A Agensi não hospeda o MCP: o ZIP traz `SKILL.md` e o template `npx -y mcp-vysor`.
+
+```bash
+bash agensi/build-zip.sh
+```
+
+Gera `agensi/zips/mcp-vysor-starter.zip` (grátis), `agensi/zips/mcp-vysor-pro.zip` (preço sugerido US$ 19–29) e `agensi/zips/mcp-tomticket-starter.zip` (fase 2). Cadastro e upload: [agensi/CREATOR.md](agensi/CREATOR.md). A URL da vitrine entra aqui quando o listing estiver no ar.
+
 ## Variáveis de ambiente
 
 | Variável | Descrição | Padrão |

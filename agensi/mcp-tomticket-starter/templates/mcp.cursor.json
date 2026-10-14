@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "tomticket": {
+      "command": "npx",
+      "args": ["-y", "mcp-tomticket"],
+      "env": {
+        "TOMTICKET_TOKEN": "paste-token-here"
+      }
+    }
+  }
+}

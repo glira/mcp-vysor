@@ -148,6 +148,22 @@ git push && git push --tags
 
 ---
 
+## 4b. Agensi (skills, não o servidor)
+
+A Agensi vende um ZIP com `SKILL.md` na raiz. O comprador instala o MCP à parte (`npx -y mcp-vysor`). Listing não exclusivo: GitHub e npm permanecem.
+
+| Pacote | Preço sugerido | ZIP |
+|--------|----------------|-----|
+| Starter | Grátis | `agensi/zips/mcp-vysor-starter.zip` |
+| Pro (playbooks de QA) | US$ 19–29 | `agensi/zips/mcp-vysor-pro.zip` |
+| TomTicket (fase 2) | Grátis ou US$ 10–19 | `agensi/zips/mcp-tomticket-starter.zip` |
+
+```bash
+bash agensi/build-zip.sh
+```
+
+Passos de conta (Google, creator mode, Stripe ou Zoneless) e texto da vitrine: [agensi/CREATOR.md](../agensi/CREATOR.md). Você fica com 70%. Revisão da Agensi costuma levar até 24 horas. Quando publicar, cole a URL do listing no README.
+
 ## 5. Checklist rápido
 
 - [x] Código no GitHub
@@ -159,6 +175,8 @@ git push && git push --tags
 - [ ] `mcp-publisher publish` (registro oficial)
 - [ ] Submeter em Glama + PulseMCP
 - [ ] (Opcional) PR no awesome-mcp-servers
+- [ ] Conta Agensi (Google + creator mode + Stripe ou Zoneless) — ver `agensi/CREATOR.md`
+- [ ] Upload dos ZIPs na Agensi (starter grátis, pro US$ 19–29)
 
 ---
 

@@ -21,6 +21,7 @@ e este projeto adere ao [Semantic Versioning](https://semver.org/lang/pt-BR/).
 - Documentação completa em `docs/`
 - Workflow CI para build TypeScript
 - Publicado no npm como [`mcp-vysor`](https://www.npmjs.com/package/mcp-vysor) — instalação via `npx -y mcp-vysor`
+- Pacotes de skill para a Agensi em `agensi/` (starter, pro e rascunho TomTicket) com `bash agensi/build-zip.sh`
 
 ### Corrigido
 
